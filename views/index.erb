@@ -1,6 +1,13 @@
+
+<form action="/named-cat">
+  First name: <input type="text" name="name">
+  Age: <input type="text" name="age">
+  <input type="submit" value="Submit">
+</form>
+
 <div
-style='border: 3px dashed red'>
+style='border: 3px dashed <%= @color %>'>
 <img src='http://bit.ly/1eze8aE'>
 </div>
 
-<h1>Hi there, Visitor! <%= @name %> </h1>
+<h1>Hi there, Visitor! <%= @name %>. Who is <%= @age %> years old! </h1>

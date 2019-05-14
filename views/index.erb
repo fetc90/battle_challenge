@@ -10,4 +10,6 @@ style='border: 3px dashed <%= @color %>'>
 <img src='http://bit.ly/1eze8aE'>
 </div>
 
-<h1>Hi there, Visitor! <%= @name %>. Who is <%= @age %> years old! </h1>
+<% if !@name.empty? %>
+<h1>My name is <%= @name%>. And i am <%= @age %> years old!!</h1>
+<% end %>

@@ -1,5 +1,7 @@
 require 'sinatra'
 
+set :session_secret, 'super secret'
+
 get '/secret' do
   "A secret path"
 end
@@ -17,10 +19,14 @@ get '/random-cat' do
   erb(:index)
 end
 
-get '/named-cat' do
+post '/named-cat' do
   p params
   @name = params[:name]
   @age = params[:age]
   @color = params[:color]
   erb(:index)
+end
+
+get '/cat_form' do
+  erb(:cat_form)
 end
